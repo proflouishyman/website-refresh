@@ -65,3 +65,20 @@
 
 ### Outcome
 - Core Wix-hosted content is now available directly from the GitHub Pages site, enabling Wix shutdown without losing major routes.
+
+## 2026-03-03 - Configure Custom Domain Cutover + Contact Form Delivery
+
+### Problem
+- GitHub Pages needed to be configured for `www.louishyman.com` before DNS cutover.
+- The migrated site replaced Wix forms, so contact submissions needed an email delivery path on static hosting.
+
+### Solution
+- Set GitHub Pages custom domain to `www.louishyman.com`.
+- Added `html5up-editorial/CNAME` so deployments keep the custom domain binding.
+- Updated `html5up-editorial/robots.txt` and `html5up-editorial/sitemap.xml` to point at the production domain.
+- Added a static contact form on `about-me/index.html` using FormSubmit (`https://formsubmit.co`) with anti-spam honeypot and redirect handling.
+- Added form UI styles in `styles.css`.
+
+### Outcome
+- GitHub Pages is prepared for custom-domain traffic and SEO indexing on `www.louishyman.com`.
+- Contact form submissions can be delivered without running a custom backend.

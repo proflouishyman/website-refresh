@@ -484,6 +484,52 @@ a:hover {
   text-decoration: none;
 }
 
+/* Contact form styles for the migrated About page. */
+.contact-form {
+  max-width: 760px;
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.82rem;
+}
+
+.field label {
+  display: inline-block;
+  margin-bottom: 0.28rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.62rem 0.72rem;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-note {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hidden-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Subtle reveal motion; disabled for reduced-motion users. */
 .reveal {
   animation: fade-up 0.65s ease both;

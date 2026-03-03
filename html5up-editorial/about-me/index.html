@@ -70,7 +70,44 @@
 
         <section class="page-footer-cta" id="contact">
           <h2 class="section-title">Contact</h2>
-          <p class="lead">For speaking and media inquiries, use one of the channels below.</p>
+          <p class="lead">For speaking and media inquiries, send a message below or use social channels.</p>
+          <!-- Static-form endpoint for GitHub Pages hosting (no server required). -->
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/lhyman@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New inquiry from louishyman.com" />
+            <input type="hidden" name="_next" value="https://www.louishyman.com/about-me/?sent=1#contact" />
+            <input
+              class="hidden-honey"
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button class="btn btn-solid" type="submit">Send Message</button>
+          </form>
+          <p class="form-note">
+            Submissions are delivered by FormSubmit. First use may require one recipient verification email.
+          </p>
           <div class="social-links">
             <a href="https://twitter.com/louishyman">Twitter/X</a>
             <a href="https://www.linkedin.com/in/louis-hyman-3489213/">LinkedIn</a>
