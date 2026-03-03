@@ -29,6 +29,9 @@ jobs:
       # Configure GitHub Pages for this repository.
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # First deployment can fail if Pages is not enabled yet.
+          enablement: true
 
       # Upload the static site folder as the deployable artifact.
       - name: Upload Site Artifact

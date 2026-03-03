@@ -30,6 +30,7 @@
 
 ### Solution
 - Added a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` to deploy `html5up-editorial/` directly to GitHub Pages on each push to `main`.
+- Enabled automatic GitHub Pages setup in the workflow (`enablement: true`) so first deploy does not fail on repos where Pages has not yet been turned on.
 - Added `.gitignore` entries for `.DS_Store` and common local editor folders to keep commits clean.
 - Kept all asset and page paths relative so the deployed artifact works from the GitHub Pages root.
 
