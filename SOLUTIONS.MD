@@ -36,3 +36,32 @@
 
 ### Outcome
 - After push, GitHub Actions can publish the site automatically from the intended folder without manual file moves.
+
+## 2026-03-03 - Migrate Wix Page Routes Into GitHub Site
+
+### Problem
+- The GitHub site only had a redesigned homepage, while most content still lived on Wix routes (`/temp`, `/borrow`, `/debtor-nation`, `/about-me`, etc.).
+- If Wix were turned off, those pages and links would break.
+
+### Solution
+- Migrated all sitemap routes into local static pages inside `html5up-editorial`:
+  - `books/`
+  - `temp/`
+  - `borrow/`
+  - `debtor-nation/`
+  - `american-capitalism/`
+  - `shopping-for-change/`
+  - `history-of-capitalism/`
+  - `talks/`
+  - `other-essays/`
+  - `about-me/`
+  - `home-1/` (legacy redirect to homepage)
+- Updated `index.html` to link internally to these local routes instead of `louishyman.com` links.
+- Extended `styles.css` with shared subpage layout classes so all migrated routes keep a consistent visual system.
+- Added deploy-friendly crawler files:
+  - `html5up-editorial/robots.txt`
+  - `html5up-editorial/sitemap.xml`
+  - `html5up-editorial/.nojekyll`
+
+### Outcome
+- Core Wix-hosted content is now available directly from the GitHub Pages site, enabling Wix shutdown without losing major routes.
