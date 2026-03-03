@@ -347,6 +347,143 @@ a:hover {
   margin: 0;
 }
 
+/* Subpage scaffolding for migrated Wix routes. */
+.subpage-main {
+  padding: 3.8rem 0 5rem;
+}
+
+.breadcrumb {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.page-hero {
+  margin-bottom: 1.8rem;
+}
+
+.page-kicker {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  line-height: 1.08;
+}
+
+.lead {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.prose {
+  max-width: 78ch;
+}
+
+.prose p {
+  margin: 0.8rem 0;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.media-box {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.media-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.media-box figcaption {
+  padding: 0.72rem 0.85rem 0.86rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.resource-list {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resource-list li + li {
+  margin-top: 0.52rem;
+}
+
+.notice-card {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 0.9rem;
+}
+
+.notice-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.book-jump-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.95rem;
+}
+
+.book-jump-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-strong);
+  padding: 0.95rem;
+}
+
+.book-jump-card h3 {
+  margin: 0;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: 1.16rem;
+}
+
+.book-jump-card p {
+  margin: 0.5rem 0 0.35rem;
+  color: var(--muted);
+}
+
+.page-footer-cta {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  margin-top: 0.85rem;
+}
+
+.social-links a {
+  text-decoration: none;
+}
+
 /* Subtle reveal motion; disabled for reduced-motion users. */
 .reveal {
   animation: fade-up 0.65s ease both;
@@ -366,7 +503,8 @@ a:hover {
 /* Responsive behavior keeps reading order clear on phones. */
 @media (max-width: 900px) {
   .hero-grid,
-  .two-column {
+  .two-column,
+  .split-layout {
     grid-template-columns: 1fr;
   }
 
