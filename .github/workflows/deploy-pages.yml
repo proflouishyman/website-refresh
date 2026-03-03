@@ -1,0 +1,42 @@
+name: Deploy Website To GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Pull repository contents for this workflow run.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Configure GitHub Pages for this repository.
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Upload the static site folder as the deployable artifact.
+      - name: Upload Site Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./html5up-editorial
+
+      # Publish the uploaded artifact to GitHub Pages.
+      - name: Deploy To GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

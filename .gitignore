@@ -1,0 +1,9 @@
+# macOS Finder metadata
+.DS_Store
+
+# Local editor metadata
+.vscode/
+.idea/
+
+# Archive artifact not needed for source deploy
+html5up-editorial.zip
