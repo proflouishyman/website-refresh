@@ -148,3 +148,18 @@
 ### Outcome
 - `/other-essays/` now presents smaller boxed images to the side of each featured card.
 - Featured cards prioritize article art over portrait photography where available.
+
+## 2026-03-04 - Add Two Additional Wall Street Journal Essay Links
+
+### Problem
+- The essays page needed two more specific Wall Street Journal links to reflect additional writing requested by the site owner.
+
+### Solution
+- Updated `html5up-editorial/other-essays/index.html` in the "Wall Street Journal and Other Outlets" list.
+- Added two new WSJ links using the exact URLs supplied by the site owner:
+  - American economy/capitalism history timeline article.
+  - History of work in America article.
+- Kept the same target/rel external-link contract used across the page.
+
+### Outcome
+- `/other-essays/` now includes the two additional WSJ links in the publication index.
