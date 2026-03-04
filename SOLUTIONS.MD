@@ -235,3 +235,22 @@
 
 ### Outcome
 - The About page now reflects the requested AI affiliation and center directorship with direct links.
+
+## 2026-03-04 - Add Reusable Migration Checklist
+
+### Problem
+- Migration lessons from the Wix -> GitHub cutover were only captured in conversation and scattered solution entries.
+- Future site migrations (including additional family domains) need a repeatable, written process.
+
+### Solution
+- Added `MIGRATION_CHECKLIST.md` at the repo root with a step-by-step process covering:
+  - pre-migration inventory,
+  - static rebuild standards,
+  - GitHub Pages setup,
+  - pre-cutover validation,
+  - DNS/SSL cutover order,
+  - post-cutover verification,
+  - governance practices (`SOLUTIONS.MD`, PR-based deploys, unverified links policy).
+
+### Outcome
+- The project now has a reusable migration playbook that can be copied to other site repos and applied consistently.
