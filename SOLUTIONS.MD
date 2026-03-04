@@ -82,3 +82,23 @@
 ### Outcome
 - GitHub Pages is prepared for custom-domain traffic and SEO indexing on `www.louishyman.com`.
 - Contact form submissions can be delivered without running a custom backend.
+
+## 2026-03-04 - Make Homepage Book Titles The Primary Links
+
+### Problem
+- In the homepage books grid, each card used a separate "Book page" link below the description.
+- This added visual clutter and made the title text itself non-interactive.
+
+### Solution
+- Updated `html5up-editorial/index.html` so each book card title (`<h3>`) contains the route link:
+  - `Temp`
+  - `Borrow`
+  - `Debtor Nation`
+  - `American Capitalism: A Reader`
+  - `Shopping for Change`
+- Removed the separate "Book page" link row from each card.
+- Updated `html5up-editorial/styles.css` to style linked titles consistently with the existing card typography and add a clear hover/focus underline state.
+
+### Outcome
+- Book titles are now the single, cleaner click target for each card.
+- The books section matches the requested simpler interaction model without changing destination URLs.
