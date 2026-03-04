@@ -125,3 +125,26 @@
 - Talks and essays now feel complete, scannable, and visual, with direct links for users to watch or read.
 - The essays section now includes substantially more links and publication coverage, especially NYT items.
 - The new components are static-site compatible and deploy cleanly on GitHub Pages.
+
+## 2026-03-04 - Make Essay Preview Images Smaller + Side-Aligned
+
+### Problem
+- On `/other-essays/`, featured images appeared above each card and felt too large for quick scanning.
+- The first featured card used a portrait image instead of article artwork.
+
+### Solution
+- Updated `other-essays/index.html`:
+  - Switched the featured preview grid to a side-thumbnail layout variant (`preview-grid-side`).
+  - Replaced the portrait-based NYT card with a NYT article card using article artwork.
+  - Replaced the Washington Post preview image with article-related artwork.
+- Added new local assets:
+  - `images/louis/previews/essay-nyt-ai.jpg`
+  - `images/louis/previews/essay-wapo-silicon.jpg`
+- Extended `styles.css` with a dedicated side-card variant:
+  - Fixed-width boxed thumbnails on the left.
+  - Content on the right.
+  - Mobile width adjustments so cards stay readable on smaller screens.
+
+### Outcome
+- `/other-essays/` now presents smaller boxed images to the side of each featured card.
+- Featured cards prioritize article art over portrait photography where available.
