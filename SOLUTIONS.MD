@@ -102,3 +102,26 @@
 ### Outcome
 - Book titles are now the single, cleaner click target for each card.
 - The books section matches the requested simpler interaction model without changing destination URLs.
+
+## 2026-03-04 - Add Talk Previews + Expand Essay Archive Links
+
+### Problem
+- The `Talks` page listed talk titles without rich previews or enough direct media links.
+- The `Essays` page had only one New York Times link and did not reflect the broader volume of writing across NYT, WSJ, and other outlets.
+- The pages needed stronger visual presentation with artwork where available while staying simple and GitHub Pages friendly.
+
+### Solution
+- Rebuilt `talks/index.html` using a reusable preview-card grid:
+  - Added six linked cards with watch links and local preview images for major talks.
+  - Mapped cards to public links from Talks at Google, Long Now, CASBS/Stanford, Heldrich Center, Cornell ILR, and C-SPAN.
+- Rebuilt `other-essays/index.html` with:
+  - A featured essay preview section (NYT archive, Atlantic, Washington Post, Vox) including artwork.
+  - An expanded New York Times essay index with multiple linked pieces and years.
+  - A second publication index for WSJ and other outlets.
+- Extended `styles.css` with shared `.preview-*` and `.essay-*` classes for consistent card/list rendering across desktop and mobile.
+- Added local preview image assets in `html5up-editorial/images/louis/previews/` so production rendering does not depend on fragile hotlinked media.
+
+### Outcome
+- Talks and essays now feel complete, scannable, and visual, with direct links for users to watch or read.
+- The essays section now includes substantially more links and publication coverage, especially NYT items.
+- The new components are static-site compatible and deploy cleanly on GitHub Pages.
