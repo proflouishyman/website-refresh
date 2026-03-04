@@ -269,3 +269,25 @@
 ### Outcome
 - `/books/` now shows the older image-forward card layout again.
 - The unwanted subheading text is removed.
+
+## 2026-03-04 - Remove Defunct Podcast and Book-Order Links
+
+### Problem
+- The podcasts page still contained legacy platform links that are no longer valid or useful:
+  - Stitcher (now sunset/redirected).
+  - iTunes U (returned 404).
+- Book detail pages still used `Order` buttons pointing to outdated/blocked purchase URLs.
+- The site owner requested removal of these defunct links and a general real-link check.
+
+### Solution
+- Updated `html5up-editorial/history-of-capitalism/index.html`:
+  - Removed `Stitcher archive` and `iTunes U archive` list items.
+- Updated `html5up-editorial/temp/index.html`, `html5up-editorial/borrow/index.html`, and `html5up-editorial/american-capitalism/index.html`:
+  - Removed all `Order` buttons from the book CTA rows.
+  - Kept internal navigation buttons (`All books`, `Course and podcast series`) intact.
+- Ran a status-check pass against external links remaining on those touched pages to verify current reachability.
+
+### Outcome
+- Defunct podcast platform links are removed.
+- Defunct `Order` links are removed from book pages.
+- Remaining external links on the touched pages currently resolve successfully in automated checks.
