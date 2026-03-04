@@ -564,6 +564,29 @@ a:hover {
   text-decoration-thickness: 1.5px;
 }
 
+/* Side-thumbnail variant used on the essays page for tighter cards. */
+.preview-grid-side {
+  grid-template-columns: 1fr;
+}
+
+.preview-grid-side .preview-card {
+  display: grid;
+  grid-template-columns: 136px 1fr;
+  align-items: stretch;
+}
+
+.preview-grid-side .preview-media {
+  height: 100%;
+  min-height: 120px;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
+  aspect-ratio: auto;
+}
+
+.preview-grid-side .preview-media img {
+  height: 100%;
+}
+
 /* Compact index lists for larger publication archives. */
 .essay-index {
   margin-top: 1rem;
@@ -730,6 +753,14 @@ a:hover {
 
   .footer-inner {
     flex-direction: column;
+  }
+
+  .preview-grid-side .preview-card {
+    grid-template-columns: 112px 1fr;
+  }
+
+  .preview-grid-side .preview-body {
+    padding: 0.72rem;
   }
 }
 
