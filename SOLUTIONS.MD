@@ -254,3 +254,18 @@
 
 ### Outcome
 - The project now has a reusable migration playbook that can be copied to other site repos and applied consistently.
+
+## 2026-03-04 - Restore Books Page Image Cards and Remove Subheading
+
+### Problem
+- The `/books/` page regressed to text-only jump cards and included extra lead copy that the site owner did not want.
+- The prior visual style with book images was lost on this route.
+
+### Solution
+- Updated `html5up-editorial/books/index.html` to use image-based `.book-card` entries (matching the established visual style used on the homepage books section).
+- Restored all five book cover/media images on the books index cards.
+- Removed the page subheading/lead line under the main books title.
+
+### Outcome
+- `/books/` now shows the older image-forward card layout again.
+- The unwanted subheading text is removed.
