@@ -219,3 +219,19 @@
 
 ### Outcome
 - The requested note text no longer appears on `/other-essays/`.
+
+## 2026-03-04 - Add About Page AI and Center Roles
+
+### Problem
+- The About page bio needed two current role updates:
+  - Membership at `https://ai.jhu.edu/`.
+  - Director role for the Center for Economy and Society.
+
+### Solution
+- Updated `html5up-editorial/about-me/index.html` copy to include:
+  - Membership in the Hopkins AI Lab (`https://ai.jhu.edu/`) alongside the Data Science and AI Institute.
+  - Director of the Center for Economy and Society (`https://snfagora.jhu.edu/our-work/labs/center-for-economy-society/`).
+- Kept the existing paragraph structure and other biography content unchanged.
+
+### Outcome
+- The About page now reflects the requested AI affiliation and center directorship with direct links.
