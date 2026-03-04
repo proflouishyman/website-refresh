@@ -207,3 +207,15 @@
 - `/other-essays/` now includes substantially more verified authored links without introducing duplicated entries.
 - Non-authored items are no longer linked.
 - Bio text now matches current appointment language across home and about pages.
+
+## 2026-03-04 - Remove Essays Page Verification Note Copy
+
+### Problem
+- The essays page included explanatory copy under "Popular Writing by Outlet" that the site owner wanted removed.
+
+### Solution
+- Removed the `<p class="essay-note">` line from `html5up-editorial/other-essays/index.html`.
+- Kept the section structure and publication lists unchanged.
+
+### Outcome
+- The requested note text no longer appears on `/other-essays/`.
