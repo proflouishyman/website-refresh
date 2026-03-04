@@ -602,6 +602,18 @@ a:hover {
   font-size: 1.35rem;
 }
 
+.essay-note {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.essay-group-title {
+  margin: 1rem 0 0.3rem;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: 1.12rem;
+}
+
 .essay-list {
   margin: 0.72rem 0 0;
   padding: 0;
@@ -619,6 +631,10 @@ a:hover {
 .essay-list a:hover,
 .essay-list a:focus-visible {
   text-decoration: underline;
+}
+
+.essay-title {
+  color: var(--text);
 }
 
 .essay-source {

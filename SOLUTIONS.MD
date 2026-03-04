@@ -163,3 +163,24 @@
 
 ### Outcome
 - `/other-essays/` now includes the two additional WSJ links in the publication index.
+
+## 2026-03-04 - Rebuild Essays Page As De-duplicated Popular Writing Archive
+
+### Problem
+- The user needed the site to focus on popular writing from the CV (not academic writing).
+- The old `/other-essays/` page mixed highlight cards and index items with repeated entries and incomplete outlet coverage.
+
+### Solution
+- Replaced the previous mixed layout in `html5up-editorial/other-essays/index.html` with a single de-duplicated archive section:
+  - Grouped entries by outlet (`Wall Street Journal`, `New York Times`, `Washington Post and The Atlantic`, `Other Outlets`).
+  - Added 42 unique popular-writing entries parsed from the CV section "Opinion Pieces and Popular Writing."
+  - Kept verified URLs where already known and listed remaining entries as plain titles with outlet/date metadata to avoid broken links.
+- Added supporting CSS in `styles.css`:
+  - `.essay-note` for archive context copy.
+  - `.essay-group-title` for outlet grouping headers.
+  - `.essay-title` for non-linked publication entries.
+- Ran a normalized title check to confirm no duplicates in the rendered popular-writing list.
+
+### Outcome
+- `/other-essays/` now reflects the CV's popular-writing record with outlet-based grouping and no duplicate titles.
+- The page no longer mixes in non-publication interview/feature links in the main publication archive.
