@@ -313,3 +313,17 @@
 
 ### Outcome
 - The full site now renders with a cleaner, brighter editorial look without changing layout or content structure.
+
+## 2026-03-04 - Revise Homepage Current Work List Copy
+
+### Problem
+- The homepage "Current Work" list used older three-item phrasing that no longer matched the requested concise wording.
+
+### Solution
+- Updated `html5up-editorial/index.html` "Current Work" list to:
+  - `History of e-commerce.`
+  - `AI and Historical Methods.`
+- Removed the previous extra list items so the section now contains only the requested two lines.
+
+### Outcome
+- The homepage now reflects the updated concise current-work wording exactly as requested.
