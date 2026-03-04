@@ -184,3 +184,26 @@
 ### Outcome
 - `/other-essays/` now reflects the CV's popular-writing record with outlet-based grouping and no duplicate titles.
 - The page no longer mixes in non-publication interview/feature links in the main publication archive.
+
+## 2026-03-04 - URL Verification Pass + Author-Only Essay Links + Bio Text Update
+
+### Problem
+- The essays archive still had many unlinked popular-writing entries even when stable URLs were available.
+- One Wall Street Journal item (`Protecting Health Records from Cyberattack`) was linked even though Louis Hyman was not the author.
+- A New York Times title needed correction from “How Sears Helped Advance Jim Crow” to “How Sears Helped Oppose Jim Crow.”
+- The homepage/about bio sentence needed to be updated to the current Johns Hopkins appointment wording.
+
+### Solution
+- Updated the bio text in both `html5up-editorial/index.html` and `html5up-editorial/about-me/index.html` to:
+  - Include the Dorothy Ross Professor title.
+  - Include membership in the Data Science and AI Institute.
+- Ran an outlet/title URL verification pass for popular-writing entries and converted verified authored items to links in `html5up-editorial/other-essays/index.html`.
+- Kept uncertain or unverified items as plain text (no link) to avoid broken/misattributed destinations.
+- Removed the non-authored WSJ URL by converting `Protecting Health Records from Cyberattack` to an unlinked title.
+- Corrected the NYT title text to “How Sears Helped Oppose Jim Crow.”
+- Updated the essays note copy to explicitly state that links are included only when URL and authorship are verified.
+
+### Outcome
+- `/other-essays/` now includes substantially more verified authored links without introducing duplicated entries.
+- Non-authored items are no longer linked.
+- Bio text now matches current appointment language across home and about pages.
