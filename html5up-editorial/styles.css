@@ -1,15 +1,15 @@
-/* Design tokens: warm neutrals with sharp ink contrast. */
+/* Design tokens: crisp editorial palette with cool neutrals. */
 :root {
-  --bg: #f3efe7;
-  --surface: #f9f6f0;
+  --bg: #f7f9fc;
+  --surface: #ffffff;
   --surface-strong: #ffffff;
-  --text: #1f2328;
-  --muted: #59616b;
-  --line: #d7d0c4;
-  --accent: #8d1e2c;
-  --accent-soft: #ebd8db;
+  --text: #1f2937;
+  --muted: #5b6472;
+  --line: #d8e0ea;
+  --accent: #0b5fff;
+  --accent-soft: #dce7ff;
   --radius: 16px;
-  --shadow: 0 12px 30px rgba(25, 24, 20, 0.08);
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 /* Baseline page settings. */
@@ -27,7 +27,7 @@ body {
   margin: 0;
   background:
     radial-gradient(circle at 18% -20%, #ffffff 0%, rgba(255, 255, 255, 0) 38%),
-    linear-gradient(180deg, #f6f2ea 0%, #f3efe7 100%);
+    linear-gradient(180deg, #f7f9fc 0%, #eef3fa 100%);
   color: var(--text);
   font-family: "Source Sans 3", "Segoe UI", sans-serif;
   font-size: 1.08rem;
@@ -76,9 +76,9 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 20;
-  border-bottom: 1px solid rgba(89, 97, 107, 0.15);
+  border-bottom: 1px solid rgba(216, 224, 234, 0.85);
   backdrop-filter: blur(8px);
-  background: rgba(246, 242, 234, 0.88);
+  background: rgba(247, 249, 252, 0.9);
 }
 
 .header-inner {

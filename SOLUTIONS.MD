@@ -291,3 +291,25 @@
 - Defunct podcast platform links are removed.
 - Defunct `Order` links are removed from book pages.
 - Remaining external links on the touched pages currently resolve successfully in automated checks.
+
+## 2026-03-04 - Apply Crisp Editorial Color Palette
+
+### Problem
+- The site's previous warm beige palette looked dull and "dingy" to the site owner.
+- A full redesign was unnecessary; the issue was mainly visual tone.
+
+### Solution
+- Updated shared design tokens in `html5up-editorial/styles.css` to a crisp editorial palette:
+  - `--bg: #f7f9fc`
+  - `--surface: #ffffff`
+  - `--text: #1f2937`
+  - `--muted: #5b6472`
+  - `--line: #d8e0ea`
+  - `--accent: #0b5fff`
+- Tuned supporting values to match:
+  - Updated body background gradient to cool neutrals.
+  - Updated sticky header background and border color to the new palette.
+  - Updated shadow tone to a cooler neutral.
+
+### Outcome
+- The full site now renders with a cleaner, brighter editorial look without changing layout or content structure.
