@@ -279,7 +279,7 @@ a:hover {
 }
 
 .book-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 20px 28px rgba(25, 24, 20, 0.11);
 }
 
@@ -817,6 +817,20 @@ a:hover {
 .js-motion .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Keep book card hover lift active after reveal classes apply transform rules. */
+.js-motion .book-card.reveal.is-visible {
+  transition:
+    opacity 0.72s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.js-motion .book-card.reveal.is-visible:hover,
+.js-motion .book-card.reveal.is-visible:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 28px rgba(25, 24, 20, 0.11);
 }
 
 /* Responsive behavior keeps reading order clear on phones. */
