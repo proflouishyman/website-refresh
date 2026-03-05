@@ -279,7 +279,7 @@ a:hover {
 }
 
 .book-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 20px 28px rgba(25, 24, 20, 0.11);
 }
 
@@ -829,7 +829,7 @@ a:hover {
 
 .js-motion .book-card.reveal.is-visible:hover,
 .js-motion .book-card.reveal.is-visible:focus-within {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 20px 28px rgba(25, 24, 20, 0.11);
 }
 
