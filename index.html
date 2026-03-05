@@ -15,6 +15,9 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script>
+      document.documentElement.classList.add("js-motion");
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -41,7 +44,7 @@
     <main id="main-content">
       <!-- Hero block -->
       <section class="section hero">
-        <div class="container hero-grid">
+        <div class="container hero-grid" data-reveal-group>
           <div class="hero-copy reveal">
             <p class="eyebrow">Historian of Work and Capitalism</p>
             <h1>Why has work become insecure?</h1>
@@ -70,11 +73,47 @@
         </div>
       </section>
 
+      <!-- Latest links -->
+      <section class="section" id="latest">
+        <div class="container">
+          <h2 class="section-title reveal">Latest</h2>
+          <div class="feature-band" data-reveal-group>
+            <article class="feature-card reveal">
+              <p class="eyebrow">Essays</p>
+              <h3><a href="other-essays/">Recent Essays and Commentary</a></h3>
+              <p>
+                Selected writing on labor, politics, technology, and the history
+                of capitalism.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <p class="eyebrow">Talks</p>
+              <h3><a href="talks/">University and Public Talks</a></h3>
+              <p>
+                Keynotes and invited lectures on work, inequality, and economic
+                history.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <p class="eyebrow">Podcasts</p>
+              <h3><a href="history-of-capitalism/">History of Capitalism Podcasts</a></h3>
+              <p>
+                Conversations on e-commerce, digital work, and changing business
+                institutions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- Books grid -->
       <section class="section section-muted" id="books">
         <div class="container">
           <h2 class="section-title reveal">Books</h2>
-          <div class="book-grid">
+          <p class="section-intro reveal">
+            Histories of debt, labor, and capitalism for readers inside and outside the academy.
+          </p>
+          <div class="book-grid" data-reveal-group>
             <!-- Temp -->
             <article class="book-card reveal">
               <img
@@ -145,7 +184,7 @@
 
       <!-- Bio section -->
       <section class="section" id="about">
-        <div class="container two-column">
+        <div class="container two-column" data-reveal-group>
           <div class="reveal">
             <h2 class="section-title">About</h2>
             <p>
@@ -179,9 +218,11 @@
 
       <!-- Talks and essays links -->
       <section class="section section-muted" id="talks">
-        <div class="container two-column">
-          <div class="reveal">
-            <h2 class="section-title">Talks</h2>
+        <div class="container">
+          <div class="spotlight-grid" data-reveal-group>
+            <article class="spotlight-card reveal">
+              <p class="eyebrow">Talks</p>
+              <h2>Recent Lecture Themes</h2>
             <ul class="link-list">
               <li>
                 <a href="talks/">The Workers of Silicon Valley</a>
@@ -196,9 +237,11 @@
                 <a href="talks/">Is My Employer an Algorithm?</a>
               </li>
             </ul>
-          </div>
-          <div class="reveal">
-            <h2 class="section-title">Essays & Podcasts</h2>
+              <a class="btn btn-ghost" href="talks/">All talks</a>
+            </article>
+            <article class="spotlight-card reveal">
+              <p class="eyebrow">Essays and Podcasts</p>
+              <h2>Writing and Audio</h2>
             <ul class="link-list">
               <li>
                 <a href="other-essays/">Selected Essays</a>
@@ -210,6 +253,8 @@
                 <a href="books/">All books and collections</a>
               </li>
             </ul>
+              <a class="btn btn-ghost" href="other-essays/">Explore essays</a>
+            </article>
           </div>
         </div>
       </section>
@@ -218,7 +263,7 @@
       <section class="section" id="reviews">
         <div class="container">
           <h2 class="section-title reveal">Selected Reviews of <em>Temp</em></h2>
-          <div class="quote-grid">
+          <div class="quote-grid" data-reveal-group>
             <blockquote class="quote-card reveal">
               <p>
                 "A revealing study of the gig economy, which, though it seems
@@ -252,5 +297,6 @@
         <a href="about-me/#contact">Contact and speaking inquiries</a>
       </div>
     </footer>
+    <script src="assets/js/editorial-motion.js" defer></script>
   </body>
 </html>
