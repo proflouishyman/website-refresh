@@ -404,3 +404,16 @@
 
 ### Outcome
 - The deployment workflow now has a second reliable trigger path for protected-branch PR merges, reducing missed publishes.
+
+## 2026-03-05 - Increase Homepage Book Card Hover Lift Strength
+
+### Problem
+- After restoring hover/focus behavior under motion, the card lift distance still felt too subtle and did not read as a clear "pop."
+
+### Solution
+- Updated `html5up-editorial/styles.css` to increase index book-card lift distance from `-4px` to `-6px` for both:
+  - `.book-card:hover` (non-motion baseline).
+  - `.js-motion .book-card.reveal.is-visible:hover` and `:focus-within` (motion-enabled state).
+
+### Outcome
+- Homepage book cards now have a more visible hover/focus lift while keeping the same transition timing and shadow profile.
