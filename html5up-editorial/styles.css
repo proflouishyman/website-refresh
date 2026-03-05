@@ -130,6 +130,12 @@ a:hover {
   line-height: 1.15;
 }
 
+.section-intro {
+  margin: -0.6rem 0 1.2rem;
+  color: var(--muted);
+  max-width: 72ch;
+}
+
 /* Hero content and portrait composition. */
 .hero {
   padding-top: 4.5rem;
@@ -175,6 +181,43 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+/* Home highlights band to break up repeated card rhythm. */
+.feature-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(25, 24, 20, 0.05);
+}
+
+.feature-card h3 {
+  margin: 0.2rem 0 0.45rem;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: 1.22rem;
+  line-height: 1.22;
+}
+
+.feature-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.feature-card h3 a:hover,
+.feature-card h3 a:focus-visible {
+  text-decoration: underline;
+}
+
+.feature-card p:last-child {
+  margin-bottom: 0;
 }
 
 /* Buttons for key calls-to-action. */
@@ -270,11 +313,65 @@ a:hover {
   font-size: 0.98rem;
 }
 
+/* Make the first homepage book card a featured horizontal panel on desktop. */
+@media (min-width: 901px) {
+  #books .book-grid .book-card:first-child {
+    grid-column: span 2;
+    grid-template-columns: minmax(210px, 42%) 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+  }
+
+  #books .book-grid .book-card:first-child img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  #books .book-grid .book-card:first-child h3 {
+    grid-column: 2;
+    margin-top: 1.05rem;
+  }
+
+  #books .book-grid .book-card:first-child p {
+    grid-column: 2;
+    margin-bottom: 1.05rem;
+    max-width: 48ch;
+  }
+}
+
 /* Two-column sections for bio, talks, and essays. */
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
+}
+
+/* Spotlight layout for home talks/essays block. */
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(25, 24, 20, 0.05);
+}
+
+.spotlight-card h2 {
+  margin: 0.1rem 0 0.85rem;
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: clamp(1.4rem, 3vw, 1.95rem);
+  line-height: 1.18;
+}
+
+.spotlight-card .link-list {
+  margin-bottom: 1rem;
 }
 
 .facts-card {
@@ -706,27 +803,29 @@ a:hover {
   overflow: hidden;
 }
 
-/* Subtle reveal motion; disabled for reduced-motion users. */
-.reveal {
-  animation: fade-up 0.65s ease both;
+/* Scroll-triggered motion system with stagger support. */
+.js-motion .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.72s ease,
+    transform 0.72s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0.94;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.js-motion .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive behavior keeps reading order clear on phones. */
 @media (max-width: 900px) {
   .hero-grid,
   .two-column,
-  .split-layout {
+  .split-layout,
+  .feature-band,
+  .spotlight-grid {
     grid-template-columns: 1fr;
   }
 
@@ -781,9 +880,16 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
+  .js-motion .reveal,
+  .js-motion .reveal.is-visible,
   .btn {
-    animation: none;
     transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-image img {
+    transition: none;
+    transform: none !important;
   }
 }
