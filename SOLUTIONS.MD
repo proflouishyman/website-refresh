@@ -352,3 +352,25 @@
 ### Outcome
 - Motion now feels intentional and layered: sections reveal on scroll with staggered rhythm.
 - Hero has subtle movement without distracting from reading.
+
+## 2026-03-05 - Homepage Layout Hierarchy Pass (Commit 2 of 2)
+
+### Problem
+- Even with improved motion, homepage structure still relied on repeated grid/list patterns, which made the page feel visually uniform.
+- High-priority content (latest work, talks/essays entry points, flagship book) needed stronger layout emphasis.
+
+### Solution
+- Updated `html5up-editorial/index.html` with new hierarchy blocks:
+  - Added a new `Latest` feature band (essays, talks, podcasts) below the hero.
+  - Added a short `Books` section intro.
+  - Reworked talks/essays block into two structured spotlight cards with stronger scan order and dedicated CTAs.
+- Updated `html5up-editorial/styles.css`:
+  - Added `feature-band`/`feature-card` styles.
+  - Added `spotlight-grid`/`spotlight-card` styles.
+  - Added `section-intro` style.
+  - Added desktop-only featured treatment for the first homepage book card (horizontal emphasis).
+  - Added responsive collapse behavior for new grids.
+
+### Outcome
+- Homepage now has clearer pacing and more intentional visual hierarchy.
+- Readers are guided from hero to latest work, then books, then talks/essays with distinct section compositions.
