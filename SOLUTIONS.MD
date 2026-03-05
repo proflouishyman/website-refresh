@@ -374,3 +374,18 @@
 ### Outcome
 - Homepage now has clearer pacing and more intentional visual hierarchy.
 - Readers are guided from hero to latest work, then books, then talks/essays with distinct section compositions.
+
+## 2026-03-05 - Restore Index Book Card Hover Pop Under Motion
+
+### Problem
+- On the homepage books grid, card hover "pop" was not working reliably when motion was enabled.
+- The `.js-motion .reveal.is-visible` transform rule had higher specificity than `.book-card:hover`, which suppressed the hover lift effect.
+
+### Solution
+- Updated `html5up-editorial/styles.css` to preserve interactive hover behavior after reveal:
+  - Added a targeted rule for `.js-motion .book-card.reveal.is-visible` to keep transform/box-shadow transitions active for interactive states.
+  - Added `.js-motion .book-card.reveal.is-visible:hover` and `:focus-within` rules to explicitly apply the lift transform and shadow.
+  - Matched the base non-motion hover transform to the same lift distance for consistency.
+
+### Outcome
+- Book cards on `index.html` now animate in on scroll and still "pop" on hover/focus as intended.
