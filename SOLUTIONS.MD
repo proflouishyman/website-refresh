@@ -327,3 +327,28 @@
 
 ### Outcome
 - The homepage now reflects the updated concise current-work wording exactly as requested.
+
+## 2026-03-05 - Homepage Motion System Upgrade (Commit 1 of 2)
+
+### Problem
+- Homepage motion relied on a single load-time keyframe for `.reveal`, so animation felt flat and repetitive.
+- All reveals fired at once instead of responding to scroll position and visual grouping.
+
+### Solution
+- Replaced keyframe-only reveal behavior with a JS-driven scroll reveal system:
+  - Added `html5up-editorial/assets/js/editorial-motion.js`.
+  - Uses `IntersectionObserver` to reveal elements when entering viewport.
+  - Adds per-group stagger delays for cards/quotes/columns.
+  - Honors `prefers-reduced-motion` and falls back to immediate reveal when needed.
+- Added subtle hero image parallax drift on scroll (clamped movement, reduced-motion safe).
+- Updated `html5up-editorial/styles.css`:
+  - `.js-motion .reveal` + `.is-visible` transition model.
+  - preserved accessibility behavior for reduced motion.
+- Updated `html5up-editorial/index.html`:
+  - early `js-motion` class bootstrap,
+  - reveal group hooks (`data-reveal-group`),
+  - script include for `editorial-motion.js`.
+
+### Outcome
+- Motion now feels intentional and layered: sections reveal on scroll with staggered rhythm.
+- Hero has subtle movement without distracting from reading.
