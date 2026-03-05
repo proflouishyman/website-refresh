@@ -389,3 +389,18 @@
 
 ### Outcome
 - Book cards on `index.html` now animate in on scroll and still "pop" on hover/focus as intended.
+
+## 2026-03-05 - Make Pages Deploy Trigger Reliable On PR Merges
+
+### Problem
+- New `main` commits created via merged PRs were not consistently triggering the GitHub Pages deploy workflow.
+- Result: merged code changes were in git, but the live site could remain on an older deployment.
+
+### Solution
+- Updated `.github/workflows/deploy-pages.yml` to trigger deploys on merged PR closure in addition to push:
+  - Added `pull_request_target` trigger on `main` with `types: [closed]`.
+  - Added a job-level `if` guard so PR-close events deploy only when `github.event.pull_request.merged == true`.
+  - Kept existing `push` and `workflow_dispatch` triggers.
+
+### Outcome
+- The deployment workflow now has a second reliable trigger path for protected-branch PR merges, reducing missed publishes.

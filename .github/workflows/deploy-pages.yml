@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+  # Some protected repos suppress deploy-on-push after squash merges; run on merged PR close too.
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - closed
   workflow_dispatch:
 
 permissions:
@@ -17,6 +23,8 @@ concurrency:
 
 jobs:
   deploy:
+    # Run for pushes and manual dispatch; for PR-close events, deploy only when merged.
+    if: ${{ github.event_name != 'pull_request_target' || github.event.pull_request.merged == true }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
