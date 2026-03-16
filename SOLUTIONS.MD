@@ -417,3 +417,18 @@
 
 ### Outcome
 - Homepage book cards now have a more visible hover/focus lift while keeping the same transition timing and shadow profile.
+
+## 2026-03-16 - Add Substack Link To Homepage and About Social Links
+
+### Problem
+- The site did not include a direct link to Louis Hyman's Substack (`computationalhistory.substack.com`), making it harder for visitors to discover ongoing newsletter writing.
+
+### Solution
+- Updated `html5up-editorial/index.html`:
+  - Added a Substack link (`Computational History on Substack`) in the homepage `Latest` essays feature card.
+- Updated `html5up-editorial/about-me/index.html`:
+  - Added a `Substack` entry to the contact/social links list.
+- Used external-link safety attributes (`target="_blank"` and `rel="noopener noreferrer"`) for both additions.
+
+### Outcome
+- Visitors can now find the Substack from both the homepage highlights area and the About/Contact social links section.
