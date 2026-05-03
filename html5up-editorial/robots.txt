@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow common AI crawlers and assistants.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Discovery pointers for search engines and AI agents.
 Sitemap: https://www.louishyman.com/sitemap.xml

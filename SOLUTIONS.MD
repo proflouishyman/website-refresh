@@ -432,3 +432,28 @@
 
 ### Outcome
 - Visitors can now find the Substack from both the homepage highlights area and the About/Contact social links section.
+
+## 2026-05-03 - AI-Focused SEO Pass + Dedicated Substack Feed Hub
+
+### Problem
+- The site needed stronger machine-readable SEO signals for AI agents and search systems.
+- Substack was linked, but not yet treated as a primary site destination with its own page and feed context.
+
+### Solution
+- Updated `html5up-editorial/index.html`:
+  - Added canonical, robots, Open Graph, and Twitter metadata.
+  - Added `Person` JSON-LD structured data with `sameAs` links (including Substack).
+  - Added a persistent `Substack` nav item and stronger Substack calls-to-action.
+- Added a new page at `html5up-editorial/substack/index.html`:
+  - Created a dedicated Substack hub with clear subscribe/archive/RSS links.
+  - Added a feed snapshot section with recent post links from the Substack RSS feed.
+  - Added feed discovery metadata (`rel="alternate"` RSS link).
+- Updated global discovery files:
+  - `html5up-editorial/robots.txt`: explicit allow rules for common AI crawlers plus discovery comments.
+  - `html5up-editorial/sitemap.xml`: added `/substack/` and `/llms.txt`.
+  - Added `html5up-editorial/llms.txt` as a concise AI-readable map of canonical pages and publication feeds.
+- Updated subpage navigation across core routes to include the new `Substack` page for consistent prominence.
+
+### Outcome
+- The site now provides stronger structured signals for AI-assisted discovery and citation.
+- Substack is promoted as a first-class destination with its own on-site hub and feed entry points.
